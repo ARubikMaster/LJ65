@@ -23,4 +23,4 @@ func _draw():
 		draw_circle(Vector2(x, y), 4.0, line_color)
 	
 	if (points.size() > 1):
-		draw_polyline(points, line_color, line_width, true)
+		draw_polyline(points, line_color, line_width, false)
