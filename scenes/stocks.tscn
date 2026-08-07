@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://bi4temw4i8u0e"]
+
+[ext_resource type="Texture2D" uid="uid://befvukpifbdlq" path="res://assets/goggle-pixelart.png" id="1_nm2hw"]
+[ext_resource type="Script" uid="uid://cdkppcd6hcph8" path="res://scripts/chart.gd" id="1_xepud"]
+[ext_resource type="FontFile" uid="uid://bajym4ag0hp72" path="res://assets/editundo.ttf" id="2_xepud"]
+[ext_resource type="Script" uid="uid://0fkplx2hm8w0" path="res://scripts/netlabel.gd" id="4_ystis"]
+
+[node name="Stocks" type="Node2D" unique_id=1399355030]
+
+[node name="BigBackground" type="ColorRect" parent="." unique_id=1088213118]
+offset_top = 44.0
+offset_right = 332.0
+offset_bottom = 205.0
+color = Color(0.18000486, 0.18000486, 0.18000486, 1)
+
+[node name="Background" type="ColorRect" parent="." unique_id=1156054863]
+offset_left = 10.0
+offset_top = 54.0
+offset_right = 322.0
+offset_bottom = 195.0
+color = Color(0.18000486, 0.18000486, 0.18000486, 1)
+script = ExtResource("1_xepud")
+
+[node name="Header" type="ColorRect" parent="." unique_id=1679084054]
+offset_right = 332.0
+offset_bottom = 44.0
+color = Color(0.099985994, 0.099985994, 0.099985994, 1)
+
+[node name="GogglePixelart" type="Sprite2D" parent="." unique_id=1410079681]
+position = Vector2(58, 21)
+texture = ExtResource("1_nm2hw")
+
+[node name="Label" type="Label" parent="." unique_id=1578819407]
+offset_left = 125.0
+offset_top = 13.0
+offset_right = 269.0
+offset_bottom = 36.0
+theme_override_fonts/font = ExtResource("2_xepud")
+theme_override_font_sizes/font_size = 20
+text = "NET: $1 Change: -$500k"
+script = ExtResource("4_ystis")

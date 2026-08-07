@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dscxoctov3kwy"]
+
+[ext_resource type="PackedScene" uid="uid://bi4temw4i8u0e" path="res://scenes/stocks.tscn" id="1_lk8fh"]
+
+[node name="GraphScreens" type="Node2D" unique_id=660340597]
+
+[node name="Stocks" parent="." unique_id=1399355030 instance=ExtResource("1_lk8fh")]
