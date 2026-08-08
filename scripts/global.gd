@@ -1,3 +1,4 @@
 extends Node
 
-var data: Array[int] = [500000, 300000, 200000, 50000, 20000, 150, 1]
+var data: Array[int] = [500000, 600000, 590000, 1, 1500000]
+var selectedIdea = "Integrate OceanAI ChartGPT 5.2 into the search engine."

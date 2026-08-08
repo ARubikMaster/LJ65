@@ -1,7 +1,101 @@
 [gd_scene format=3 uid="uid://dscxoctov3kwy"]
 
+[ext_resource type="Script" uid="uid://b47opjj40depj" path="res://scripts/graph_screens.gd" id="1_iukoy"]
 [ext_resource type="PackedScene" uid="uid://bi4temw4i8u0e" path="res://scenes/stocks.tscn" id="1_lk8fh"]
+[ext_resource type="FontFile" uid="uid://bajym4ag0hp72" path="res://assets/editundo.ttf" id="2_ebj7j"]
+[ext_resource type="Texture2D" uid="uid://bkxeylgew25yl" path="res://assets/investors/salmon-altman.png" id="2_hj1i6"]
 
 [node name="GraphScreens" type="Node2D" unique_id=660340597]
+script = ExtResource("1_iukoy")
+
+[node name="Sidebar" type="ColorRect" parent="." unique_id=510805127]
+offset_left = 332.0
+offset_right = 462.0
+offset_bottom = 205.0
+color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+
+[node name="SalmonAltman" type="Sprite2D" parent="Sidebar" unique_id=1736396055]
+position = Vector2(63, 77)
+scale = Vector2(3, 3)
+texture = ExtResource("2_hj1i6")
 
 [node name="Stocks" parent="." unique_id=1399355030 instance=ExtResource("1_lk8fh")]
+
+[node name="Textbox" type="ColorRect" parent="." unique_id=1555650493]
+offset_left = 332.0
+offset_top = 125.0
+offset_right = 462.0
+offset_bottom = 205.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="Textbox" unique_id=483840955]
+layout_mode = 0
+offset_top = 7.0
+offset_right = 130.0
+offset_bottom = 30.0
+theme_override_fonts/font = ExtResource("2_ebj7j")
+text = "Told you so!"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Seperator" type="ColorRect" parent="." unique_id=1051799610]
+offset_top = 205.0
+offset_right = 462.0
+offset_bottom = 214.0
+color = Color(0.20648912, 0.2775467, 0.43110284, 1)
+
+[node name="Footer" type="ColorRect" parent="." unique_id=935581925]
+offset_top = 214.0
+offset_right = 462.0
+offset_bottom = 308.0
+color = Color(0.11301095, 0.15921885, 0.26182818, 1)
+
+[node name="Button" type="Button" parent="Footer" unique_id=505146448]
+layout_mode = 0
+offset_left = 317.0
+offset_top = 22.0
+offset_right = 443.0
+offset_bottom = 73.0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_ebj7j")
+theme_override_font_sizes/font_size = 32
+text = "NEXT"
+
+[node name="Label" type="Label" parent="Footer" unique_id=340656225]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 11.0
+offset_right = 302.0
+offset_bottom = 80.0
+theme_override_fonts/font = ExtResource("2_ebj7j")
+text = "SELECTED IDEA:
+
+Integrate OceanAI ChartGPT 5.2
+into the search engine"
+autowrap_mode = 3
+
+[node name="Stonks" type="Label" parent="Footer" unique_id=85105571]
+visible = false
+layout_mode = 0
+offset_left = 52.999992
+offset_top = -135.99998
+offset_right = 157.0
+offset_bottom = -106.999985
+rotation = -0.2617994
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = ExtResource("2_ebj7j")
+theme_override_font_sizes/font_size = 32
+text = "STONKS!"
+
+[node name="NotStonks" type="Label" parent="Footer" unique_id=1100893444]
+visible = false
+layout_mode = 0
+offset_left = 30.999985
+offset_top = -125.99999
+offset_right = 198.99998
+offset_bottom = -96.99999
+rotation = -0.2617994
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_ebj7j")
+theme_override_font_sizes/font_size = 32
+text = "NOT STONKS!"
