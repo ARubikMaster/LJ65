@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cmfkysyq112hb"]
+
+[ext_resource type="Script" uid="uid://ghcdgtfl0ebk" path="res://scenes/investor_suggestions.gd" id="1_335q3"]
+
+[node name="investor_suggestions" type="Node2D" unique_id=1114462662]
+script = ExtResource("1_335q3")
+
+[node name="ItemList" type="ItemList" parent="." unique_id=1803500183]
+offset_top = 26.0
+offset_right = 482.0
+offset_bottom = 340.0
+item_count = 4
+item_0/text = "Salmon Altman suggests:"
+item_0/selectable = false
+item_0/disabled = true
+item_1/text = " Integrating OceanAI's ChartGPT 5.2 into the search engine"
+item_2/text = "Investor Joe suggests:"
+item_2/selectable = false
+item_2/disabled = true
+item_3/text = "Lay off 2000 employees"
+
+[node name="Label" type="Label" parent="." unique_id=1327407281]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Your investors have some suggestions!"
