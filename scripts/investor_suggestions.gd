@@ -1,7 +1,10 @@
 extends Node2D
 @onready var item_list: ItemList = $ItemList
-var Currentsuggestions = [["Salmon Altman","Integrating OceanAI's ChartGPT 5.2 into the search engine"],["Investor Joe","Lay off 2000 employees"]]
+const SUGGESTIONS = preload("res://scripts/Suggestions.txt")
 
+const Suggestions = SUGGESTIONS
+
+var Currentsuggestions = [["Salmon Altman","Integrating OceanAI's ChartGPT 5.2 into the search engine"],["Investor Joe","Lay off 2000 employees"]]
 
 func _ready() -> void:
 	writeSuggestions()
